@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const mongoose = require('mongoose')
 const port = 1738
 
 const courses = [
@@ -8,9 +9,9 @@ const courses = [
     {is: 3, name: 'science'},
 ]
 
-//app module has all the http requests
-app.get('/', (req, res) => {
-    res.send('Tu eres mi amigo!')
+get the menu
+app.get('/menu', (req, res) => {
+    res.json(itemStore)
 })
 
 // get courses
